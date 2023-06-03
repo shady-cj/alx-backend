@@ -63,9 +63,6 @@ def index():
     return render_template('5-index.html', user=getattr(g, 'user', None))
 
 
-
-    
-
 @app.before_request
 def before_request():
     """
