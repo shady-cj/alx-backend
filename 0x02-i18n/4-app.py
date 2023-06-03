@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Creating a simple web app
+with internationalization
 """
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
