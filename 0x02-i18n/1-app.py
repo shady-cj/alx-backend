@@ -7,9 +7,15 @@ from flask_babel import Babel
 
 app = Flask(__name__)
 class Config:
+    """
+    babel configs
+    """
     LANGUAGES = ["en", "fr"]
-app.config['BABEL_DEFAULT_LOCALE'] = Config.LANGUAGES[0]
-app.config['BABEL_DEFAULT_TIMEZONE'] = "UTC"
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
+
+print(app.config)
+app.config.from_object(Config)
 babel = Babel(app)
 
 
@@ -19,7 +25,7 @@ def index():
     Defining simple default route
     to return a template
     """
-    return render_template('0-index.html')
+    return render_template('1-index.html')
 
 
 if __name__ == '__main__':
