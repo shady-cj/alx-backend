@@ -65,7 +65,7 @@ def index():
     Defining simple default route
     to return a template
     """
-    return render_template('5-index.html', user=getattr(g, 'user', None))
+    return render_template('6-index.html', user=getattr(g, 'user', None))
 
 
 @app.before_request
