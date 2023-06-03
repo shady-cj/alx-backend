@@ -5,7 +5,10 @@ Creating a simple web app
 from flask import Flask, render_template
 from flask_babel import Babel
 
+
 app = Flask(__name__)
+
+
 class Config:
     """
     babel configs
@@ -14,7 +17,7 @@ class Config:
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
-print(app.config)
+
 app.config.from_object(Config)
 babel = Babel(app)
 
